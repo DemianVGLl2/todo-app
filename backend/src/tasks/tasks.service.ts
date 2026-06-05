@@ -17,7 +17,7 @@ export class TasksService {
         return this.prisma.task.create({ data });
     }
 
-    update(id: number, data: { title?: string; description?: string }) {
+    update(id: number, data: { title?: string; description?: string; completed?: boolean }) {
         return this.prisma.task.update({ where: { id }, data });
     }
 
